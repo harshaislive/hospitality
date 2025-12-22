@@ -41,7 +41,7 @@ export default function AccommodationSplit() {
 
   return (
     <section className="flex flex-col md:flex-row w-full min-h-[800px] bg-off-white">
-      <div className="w-full md:w-[55%] py-20 px-5 md:px-[60px] flex flex-col justify-center items-center">
+      <div className="w-full md:w-1/2 py-20 px-5 md:px-[60px] flex flex-col justify-center items-center">
         <div className="text-center max-w-[600px] mb-[60px]">
           <span className="text-[0.7rem] uppercase tracking-[2.5px] font-normal text-rich-red mb-[25px] block">Poomaale Estate, Coorg</span>
           <h2 className="text-[3rem] mb-[30px] leading-[1.2]">The Blyton Bungalow</h2>
@@ -54,9 +54,6 @@ export default function AccommodationSplit() {
           <div className="flex gap-10 justify-center">
             <Link href="https://live.ipms247.com/booking/book-rooms-blytonbungalow" className="text-[0.75rem] uppercase tracking-[2px] font-normal text-rich-red pb-[3px] border-b border-rich-red inline-flex items-center gap-[5px] hover:opacity-60 transition-opacity">
               Reserve <span className="text-[1rem] relative -top-[2px]">↗</span>
-            </Link>
-            <Link href="#" className="text-[0.75rem] uppercase tracking-[2px] font-normal text-rich-red pb-[3px] border-b border-rich-red inline-flex items-center gap-[5px] hover:opacity-60 transition-opacity">
-              Gallery
             </Link>
           </div>
         </div>
@@ -98,7 +95,7 @@ export default function AccommodationSplit() {
         </div>
       </div>
 
-      <div className="w-full md:w-[45%] h-[400px] md:h-auto bg-[url('https://ik.imagekit.io/ofgaefbk0/IMG_4142.jpg?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center order-first md:order-last">
+      <div className="w-full md:w-1/2 h-[400px] md:h-auto bg-[url('https://ik.imagekit.io/ofgaefbk0/IMG_4142.jpg?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center order-first md:order-last">
       </div>
     </section>
   );
