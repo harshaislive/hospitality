@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+
+  --color-dark-earth: #342e29;
+  --color-rich-red: #86312b;
+  --color-forest-green: #344736;
+  --color-deep-blue: #002140;
+  
+  --color-dark-brown: #4b3c35;
+  --color-warm-yellow: #ffc083;
+  --color-soft-green: #b8dc99;
+  --color-soft-gray: #e7e4df;
+  --color-off-white: #fdfbf7;
+  --color-light-blue: #b0ddf1;
+
+  /* Functional aliases matching original design intent */
+  --color-accent: var(--color-forest-green);
+  --color-highlight: var(--color-rich-red);
+  --color-text-main: var(--color-dark-earth);
+  --color-text-light: var(--color-dark-brown);
+  --color-bg-main: var(--color-off-white);
+  --color-bg-alt: var(--color-soft-gray);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--color-text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+/* Custom Utilities for Original CSS classes if needed, 
+   but we will try to use Tailwind classes in JSX */
