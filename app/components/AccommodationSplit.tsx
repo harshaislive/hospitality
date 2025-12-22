@@ -41,6 +41,9 @@ export default function AccommodationSplit() {
 
   return (
     <section className="flex flex-col md:flex-row w-full min-h-[800px] bg-off-white">
+      <div className="w-full md:w-1/2 h-[400px] md:h-auto bg-[url('https://ik.imagekit.io/ofgaefbk0/IMG_4142.jpg?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
+      </div>
+
       <div className="w-full md:w-1/2 py-20 px-5 md:px-[60px] flex flex-col justify-center items-center">
         <div className="text-center max-w-[600px] mb-[60px]">
           <span className="text-[0.7rem] uppercase tracking-[2.5px] font-normal text-rich-red mb-[25px] block">Poomaale Estate, Coorg</span>
@@ -94,9 +97,8 @@ export default function AccommodationSplit() {
           </button>
         </div>
       </div>
-
-      <div className="w-full md:w-1/2 h-[400px] md:h-auto bg-[url('https://ik.imagekit.io/ofgaefbk0/IMG_4142.jpg?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center order-first md:order-last">
-      </div>
     </section>
+  );
+}
   );
 }
