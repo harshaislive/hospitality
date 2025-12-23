@@ -83,7 +83,7 @@ export default function ExperiencesGrid() {
     <section className="py-[120px] px-10 text-center bg-off-white">
       <div className="max-w-[700px] mx-auto mb-[80px]">
         <h2 className="text-[2.8rem] mb-[20px] text-dark-earth">The Wild, Curated</h2>
-        <p className="text-dark-earth">
+        <p className="text-dark-earth font-light">
           For those who want to do more than just look. Trek the Western Ghats. Learn the alchemy of coffee. Or simply sit still and let the forest come to you.
         </p>
       </div>
@@ -98,10 +98,10 @@ export default function ExperiencesGrid() {
             <img 
               src={exp.src} 
               alt={exp.alt} 
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 block"
+              className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 block"
             />
-            <div className="absolute inset-0 bg-[#002140]/35 flex items-center justify-center transition-colors duration-300 group-hover:bg-[#002140]/25">
-              <span className="text-white font-serif text-[1.8rem] italic leading-tight">
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-all duration-500 group-hover:bg-black/20">
+              <span className="text-white font-serif text-[1.6rem] md:text-[1.8rem] font-extralight italic leading-tight px-6">
                 {exp.displayTitle}
               </span>
             </div>
