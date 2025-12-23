@@ -25,7 +25,6 @@ export default function Footer() {
           <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Collectives</Link>
           <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Hospitality</Link>
           <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Bewild</Link>
-          <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Journal</Link>
         </div>
 
         <div className="flex-1 min-w-[200px]">
