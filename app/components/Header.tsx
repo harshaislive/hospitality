@@ -34,18 +34,42 @@ export default function Header() {
       </div>
       <nav className="hidden md:block">
         <ul className="flex list-none gap-[35px]">
-          {['Collectives', 'Hospitality', 'Bewild', 'Journal', 'About'].map((item) => (
-            <li key={item}>
-              <Link
-                href="#"
-                className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
-                  scrolled ? 'text-white' : 'text-inherit'
-                }`}
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
+          <li>
+            <Link
+              href="https://beforest.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
+                scrolled ? 'text-white' : 'text-inherit'
+              }`}
+            >
+              Beforest
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://bewild.life/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
+                scrolled ? 'text-white' : 'text-inherit'
+              }`}
+            >
+              Bewild
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://experiences.beforest.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
+                scrolled ? 'text-white' : 'text-inherit'
+              }`}
+            >
+              Beforest Experiences
+            </Link>
+          </li>
           <li>
             <Link
               href="/contact-us"
