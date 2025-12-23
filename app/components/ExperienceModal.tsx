@@ -138,17 +138,17 @@ export default function ExperienceModal({ isOpen, onClose, data }: ExperienceMod
             </ul>
 
             {/* CTA Button */}
-            <div className="mt-auto pt-8 border-t border-white/5">
+            <div className="mt-auto pt-8 border-t border-white/5 flex justify-center md:justify-start">
               <a 
                 href={data.ctaLink} 
-                className="group block w-full bg-white text-[#1a1715] py-5 px-6 text-center uppercase tracking-[3px] text-[0.7rem] font-medium transition-all duration-500 hover:bg-warm-yellow hover:text-black shadow-xl"
+                className="inline-block px-10 py-[16px] bg-white uppercase text-[0.75rem] tracking-[2.5px] font-normal text-rich-red transition-all duration-300 hover:italic hover:scale-105 shadow-lg"
               >
-                Reserve the stay <span className="inline-block transition-transform duration-500 group-hover:translate-x-2 ml-2">→</span>
+                Reserve the stay
               </a>
-              <p className="text-center text-[0.6rem] uppercase tracking-[2px] text-white/30 mt-4 font-sans">
-                Available exclusively for residents
-              </p>
             </div>
+            <p className="text-center md:text-left text-[0.6rem] uppercase tracking-[2px] text-white/30 mt-4 font-sans">
+              Available exclusively for residents
+            </p>
 
           </div>
         </div>
