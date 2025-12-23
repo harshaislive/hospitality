@@ -24,9 +24,9 @@ export default function Footer() {
 
         <div className="flex-1 min-w-[200px]">
           <h4 className="font-sans text-[0.8rem] uppercase tracking-[2px] mb-[25px] text-white">Company</h4>
-          <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">About</Link>
-          <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Careers</Link>
-          <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Press</Link>
+          <Link href="https://beforest.co/about-us/" target="_blank" rel="noopener noreferrer" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">About Us</Link>
+          <Link href="https://beforest.co/" target="_blank" rel="noopener noreferrer" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Beforest Home</Link>
+          <Link href="https://beforest.co/blogs/" target="_blank" rel="noopener noreferrer" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Blogs</Link>
           <Link href="/contact-us" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Contact</Link>
         </div>
 
