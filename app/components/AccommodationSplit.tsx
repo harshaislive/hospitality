@@ -4,11 +4,10 @@ import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const carouselImages = [
-  { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(4).jpg?q=80&w=2070&auto=format&fit=crop", alt: "Cozy suite interior" },
+  { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(4).jpg?q=80&w=2070&auto=format&fit=crop", alt: "Cozy room interior" },
   { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(7).jpg?q=80&w=1887&auto=format&fit=crop", alt: "Estate porch with rocking chairs" },
   { src: "https://ik.imagekit.io/ofgaefbk0/IMG_2786.jpg?q=80&w=2070&auto=format&fit=crop", alt: "Sunroom overlooking the forest" },
   { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(8).jpg?q=80&w=2070&auto=format&fit=crop", alt: "Forest-side breakfast nook" },
-  { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2038%20PM%20(1).jpg?q=80&w=2070&auto=format&fit=crop", alt: "Coffee plantation walk" },
   { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(3).jpg?q=80&w=1978&auto=format&fit=crop", alt: "Misty forest view" },
 ];
 

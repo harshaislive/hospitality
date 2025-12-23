@@ -46,6 +46,16 @@ export default function Header() {
               </Link>
             </li>
           ))}
+          <li>
+            <Link
+              href="/contact-us"
+              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
+                scrolled ? 'text-white' : 'text-inherit'
+              }`}
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

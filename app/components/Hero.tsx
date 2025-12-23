@@ -22,7 +22,7 @@ export default function Hero() {
         {/* Right Column: Description & CTA */}
         <div className="flex-1 text-left md:text-right max-w-[500px] w-full mt-auto md:mt-0 flex flex-col justify-end">
           <p className="text-sm md:text-xl font-light leading-[1.6] text-off-white mb-[15px] md:mb-[35px]">
-            Two suites. 128 acres. Infinite quiet. A Kodava-inspired sanctuary where the coffee grows wild and time moves at the speed of nature.
+            6 rooms. 128 acres. Infinite quiet. A Kodava-inspired sanctuary where the coffee grows wild and time moves at the speed of nature.
           </p>
           <div className="flex justify-start md:justify-end">
             <Link href="https://live.ipms247.com/booking/book-rooms-blytonbungalow" className="inline-block px-10 py-[16px] bg-white uppercase text-[0.75rem] tracking-[2.5px] font-normal text-rich-red transition-all duration-300 hover:italic hover:scale-105 shadow-lg">

@@ -27,14 +27,28 @@ export default function Footer() {
           <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">About</Link>
           <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Careers</Link>
           <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Press</Link>
-          <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Contact</Link>
+          <Link href="/contact-us" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Contact</Link>
         </div>
 
         <div className="flex-1 min-w-[200px]">
           <h4 className="font-sans text-[0.8rem] uppercase tracking-[2px] mb-[25px] text-white">Follow Us</h4>
-          <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Instagram</Link>
-          <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">LinkedIn</Link>
-          <Link href="#" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Facebook</Link>
+          <Link href="https://www.instagram.com/blytonbungalow/" target="_blank" rel="noopener noreferrer" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">Instagram</Link>
+          <Link href="https://www.youtube.com/@BeforestFarming" target="_blank" rel="noopener noreferrer" className="block text-off-white mb-[12px] text-[0.9rem] opacity-90 hover:text-warm-yellow hover:opacity-100 transition-all duration-300">YouTube</Link>
+        </div>
+
+        <div className="flex-1 min-w-[300px]">
+          <h4 className="font-sans text-[0.8rem] uppercase tracking-[2px] mb-[25px] text-white">Location</h4>
+          <div className="w-full h-[180px] rounded-sm overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.052013867934!2d75.6106229!3d12.244757499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4516819164faf%3A0xc1ed3d0f2f2eb84!2sBlyton%20Bungalow!5e0!3m2!1sen!2sin!4v1766492216345!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
 
       </div>
@@ -43,9 +57,10 @@ export default function Footer() {
         <div className="mb-5 md:mb-0">
           &copy; 2025 Beforest Lifestyle Solutions. All rights reserved.
         </div>
-        <div className="flex gap-5">
-          <Link href="#" className="text-soft-gray">Privacy Policy</Link>
-          <Link href="#" className="text-soft-gray">Terms of Use</Link>
+        <div className="flex gap-5 flex-wrap justify-center md:justify-end">
+          <Link href="/privacy-policy" className="text-soft-gray hover:text-white transition-colors">Privacy Policy</Link>
+          <Link href="/terms-and-conditions" className="text-soft-gray hover:text-white transition-colors">Terms and Conditions</Link>
+          <Link href="/return-and-cancellation-policy" className="text-soft-gray hover:text-white transition-colors">Return and Cancellation Policy</Link>
         </div>
       </div>
     </footer>

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://hospitality.beforest.co/',
     title: 'The Blyton Bungalow | Live Where the Forest Breathes',
-    description: 'Discover a Kodava-inspired haven where six suites face 128 acres of living coffee estate and rain-fed wilderness.',
+    description: 'Discover a Kodava-inspired haven where six rooms face 128 acres of living coffee estate and rain-fed wilderness.',
     siteName: 'Beforest Hospitality',
     images: [
       {
