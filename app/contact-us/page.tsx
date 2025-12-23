@@ -3,8 +3,12 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import { useActionState } from 'react';
+import { submitContactForm } from '../actions/contact';
 
 export default function ContactUs() {
+  const [state, formAction, isPending] = useActionState(submitContactForm, null);
+
   return (
     <main className="w-full min-h-screen bg-off-white">
       <Header />
@@ -47,14 +51,16 @@ export default function ContactUs() {
 
           {/* Right Column: Form */}
           <div className="w-full md:w-1/2 bg-white p-8 md:p-10 shadow-lg rounded-sm">
-            <form className="flex flex-col gap-6">
+            <form action={formAction} className="flex flex-col gap-6">
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-1">
                   <label htmlFor="firstName" className="block text-[0.9rem] text-dark-earth mb-2">First name</label>
                   <input 
                     type="text" 
-                    id="firstName" 
+                    id="firstName"
+                    name="firstName" 
                     placeholder="ex. Mike"
+                    required
                     className="w-full border border-gray-300 p-3 text-dark-earth focus:outline-none focus:border-rich-red transition-colors rounded-sm"
                   />
                 </div>
@@ -62,8 +68,10 @@ export default function ContactUs() {
                   <label htmlFor="lastName" className="block text-[0.9rem] text-dark-earth mb-2">Last name</label>
                   <input 
                     type="text" 
-                    id="lastName" 
+                    id="lastName"
+                    name="lastName" 
                     placeholder="ex. Scott"
+                    required
                     className="w-full border border-gray-300 p-3 text-dark-earth focus:outline-none focus:border-rich-red transition-colors rounded-sm"
                   />
                 </div>
@@ -73,8 +81,10 @@ export default function ContactUs() {
                 <label htmlFor="email" className="block text-[0.9rem] text-dark-earth mb-2">Email</label>
                 <input 
                   type="email" 
-                  id="email" 
+                  id="email"
+                  name="email" 
                   placeholder="ex. Email"
+                  required
                   className="w-full border border-gray-300 p-3 text-dark-earth focus:outline-none focus:border-rich-red transition-colors rounded-sm"
                 />
               </div>
@@ -83,7 +93,8 @@ export default function ContactUs() {
                 <label htmlFor="phone" className="block text-[0.9rem] text-dark-earth mb-2">Phone number</label>
                 <input 
                   type="tel" 
-                  id="phone" 
+                  id="phone"
+                  name="phone" 
                   placeholder="ex. Phone"
                   className="w-full border border-gray-300 p-3 text-dark-earth focus:outline-none focus:border-rich-red transition-colors rounded-sm"
                 />
@@ -92,7 +103,9 @@ export default function ContactUs() {
               <div className="flex items-center gap-3 mt-2">
                 <input 
                   type="checkbox" 
-                  id="terms" 
+                  id="terms"
+                  name="terms" 
+                  required
                   className="w-5 h-5 accent-rich-red cursor-pointer"
                 />
                 <label htmlFor="terms" className="text-[0.9rem] text-dark-earth cursor-pointer select-none">
@@ -100,11 +113,18 @@ export default function ContactUs() {
                 </label>
               </div>
 
+              {state?.message && (
+                <div className={`p-4 text-sm rounded-sm ${state.success ? 'bg-soft-green/20 text-forest-green' : 'bg-red-50 text-rich-red'}`}>
+                  {state.message}
+                </div>
+              )}
+
               <button 
                 type="submit" 
-                className="mt-4 bg-forest-green text-white py-4 px-8 uppercase tracking-[2px] text-[0.8rem] hover:bg-dark-earth transition-colors duration-300 shadow-md w-full md:w-auto self-start"
+                disabled={isPending}
+                className="mt-4 bg-forest-green text-white py-4 px-8 uppercase tracking-[2px] text-[0.8rem] hover:bg-dark-earth transition-colors duration-300 shadow-md w-full md:w-auto self-start disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Submit
+                {isPending ? 'Submitting...' : 'Submit'}
               </button>
             </form>
           </div>
