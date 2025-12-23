@@ -36,6 +36,16 @@ export default function Header() {
         <ul className="flex list-none gap-[35px]">
           <li>
             <Link
+              href="https://hospitality.beforest.co/"
+              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
+                scrolled ? 'text-white' : 'text-inherit'
+              }`}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
               href="https://beforest.co/"
               target="_blank"
               rel="noopener noreferrer"
