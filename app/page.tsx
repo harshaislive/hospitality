@@ -24,7 +24,7 @@ export default function Home() {
         title="Forest-Friendly Food"
         description="Meals at Blyton are not sourced; they are gathered. Wild honey, shade-grown coffee, and seasonal fruit from our permaculture forests. This is not just dining; it is participating in the ecosystem."
         linkText="Visit the Shop"
-        linkUrl="#"
+        linkUrl="https://bewild.life/"
         reversed={true}
         accentColor="red"
         slides={[
