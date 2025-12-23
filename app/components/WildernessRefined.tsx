@@ -54,7 +54,7 @@ export default function WildernessRefined() {
             "6 Signature rooms designed to disappear into the landscape.",
             "Cuisine that travels zero miles—from soil to plate.",
             "128 acres of coffee estate, yours to roam.",
-            "Neighbors include the Malabar Giant Squirrel and the Malabar Grey Hornbill."
+            "Neighbors include the Malabar Giant Squirrel and the Malabar Hornbill."
           ].map((item, i) => (
             <li key={i} className="py-[18px] border-b border-black/10 font-serif text-[1.1rem] italic text-dark-earth">
               {item}

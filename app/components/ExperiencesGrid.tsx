@@ -16,11 +16,10 @@ export default function ExperiencesGrid() {
       alt: "Exquisite Bird Watching",
       category: "AVIAN SANCTUARY — GUIDED",
       subtitle: "WESTERN GHATS. ENDEMIC SPECIES AND MIGRATORY MARVELS.",
-      description: "Wake up to the call of the Malabar Whistling Thrush. Spot the elusive Great Hornbill gliding across the canopy. Our naturalist-led walks take you deep into the avian world of Coorg, where every rustle tells a story and every sighting is a privilege.",
+      description: "Wake up to the call of the Malabar Whistling Thrush. Spot the elusive Malabar Hornbill gliding across the canopy. Our naturalist-led walks take you deep into the avian world of Coorg, where every rustle tells a story and every sighting is a privilege.",
       features: ["Guided by expert naturalists", "Early morning & dusk trails", "Photography opportunities"],
       images: [
-        "https://ik.imagekit.io/ofgaefbk0/PBR_4320%20(1).jpg?q=80&w=2070&auto=format&fit=crop",
-        "https://ik.imagekit.io/ofgaefbk0/PBR_1763.JPG?q=80&w=2070&auto=format&fit=crop" // Placeholder secondary
+        "https://ik.imagekit.io/ofgaefbk0/PBR_4320%20(1).jpg?q=80&w=2070&auto=format&fit=crop"
       ],
       ctaLink: "https://live.ipms247.com/booking/book-rooms-blytonbungalow"
     },
@@ -35,8 +34,7 @@ export default function ExperiencesGrid() {
       description: "Leave the beaten path behind. Traverse through dense shola forests, cross sparkling streams, and stand atop peaks that offer panoramic views of the Western Ghats. This is the wilderness, unfiltered, where the only footprints you see are likely not human.",
       features: ["Customizable difficulty levels", "Packed picnic lunches", "Flora & fauna identification"],
       images: [
-        "https://cdn.prod.website-files.com/66052e0267febd15266c1c0c/6605573d25c94848ff9fb62f_PBR_8688.jpg?q=80&w=2070&auto=format&fit=crop",
-        "https://ik.imagekit.io/ofgaefbk0/PBR_4978.jpg?q=80&w=2070&auto=format&fit=crop" // Placeholder secondary
+        "https://cdn.prod.website-files.com/66052e0267febd15266c1c0c/6605573d25c94848ff9fb62f_PBR_8688.jpg?q=80&w=2070&auto=format&fit=crop"
       ],
       ctaLink: "https://live.ipms247.com/booking/book-rooms-blytonbungalow"
     },
@@ -51,8 +49,7 @@ export default function ExperiencesGrid() {
       description: "Taste the difference of food grown with intention. Walk our permaculture gardens, harvest fresh produce, and watch as our chefs transform it into traditional Kodava delicacies. It’s not just a meal; it’s a connection to the earth and a celebration of seasonal abundance.",
       features: ["Harvest your own vegetables", "Cooking demonstrations", "Traditional Kodava recipes"],
       images: [
-        "https://ik.imagekit.io/ofgaefbk0/PBR_4978.jpg?q=80&w=2070&auto=format&fit=crop",
-        "https://cdn.prod.website-files.com/66052e0267febd15266c1c0c/6605573d25c94848ff9fb62f_PBR_8688.jpg?q=80&w=2070&auto=format&fit=crop" // Placeholder secondary
+        "https://ik.imagekit.io/ofgaefbk0/PBR_4978.jpg?q=80&w=2070&auto=format&fit=crop"
       ],
       ctaLink: "https://live.ipms247.com/booking/book-rooms-blytonbungalow"
     },
@@ -67,8 +64,7 @@ export default function ExperiencesGrid() {
       description: "Walk beneath the canopy where our coffee grows in harmony with the forest. Learn the journey from bean to cup—from the delicate white blossoms to the roasting process that fills the air with that unmistakable aroma. Discover why shade-grown coffee is better for the planet and your palate.",
       features: ["Plantation walkthroughs", "Bean picking (seasonal)", "Tasting sessions"],
       images: [
-        "https://ik.imagekit.io/ofgaefbk0/PBR_1763.JPG?q=80&w=2070&auto=format&fit=crop",
-        "https://ik.imagekit.io/ofgaefbk0/PBR_4320%20(1).jpg?q=80&w=2070&auto=format&fit=crop" // Placeholder secondary
+        "https://ik.imagekit.io/ofgaefbk0/PBR_1763.JPG?q=80&w=2070&auto=format&fit=crop"
       ],
       ctaLink: "https://live.ipms247.com/booking/book-rooms-blytonbungalow"
     }
