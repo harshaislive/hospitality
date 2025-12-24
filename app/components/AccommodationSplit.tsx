@@ -2,13 +2,14 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const carouselImages = [
   { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(4).jpg?q=80&w=2070&auto=format&fit=crop", alt: "Cozy room interior" },
   { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(7).jpg?q=80&w=1887&auto=format&fit=crop", alt: "Estate porch with rocking chairs" },
   { src: "https://ik.imagekit.io/ofgaefbk0/IMG_2786.jpg?q=80&w=2070&auto=format&fit=crop", alt: "Sunroom overlooking the forest" },
   { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(8).jpg?q=80&w=2070&auto=format&fit=crop", alt: "Forest-side breakfast nook" },
-  { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(3).jpg?q=80&w=1978&auto=format&fit=crop", alt: "Misty forest view" },
+  { src: "https://ik.imagekit.io/ofgaefbk0/Photo%20Jul%2019,%206%2001%2037%20PM%20(3).jpg?q=100&w=1978&auto=format&fit=crop", alt: "Misty forest view" },
 ];
 
 export default function AccommodationSplit() {
@@ -79,8 +80,14 @@ export default function AccommodationSplit() {
           >
             <div className="flex gap-6 w-max pb-4"> {/* w-max to force horizontal */}
               {carouselImages.map((img, idx) => (
-                <div key={idx} className="carousel-card w-[280px] md:w-[360px] bg-white shadow-lg shrink-0">
-                  <img src={img.src} alt={img.alt} className="w-full h-[360px] object-cover block" />
+                <div key={idx} className="carousel-card relative w-[280px] md:w-[360px] h-[360px] bg-white shadow-lg shrink-0">
+                  <Image 
+                    src={img.src} 
+                    alt={img.alt} 
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 280px, 360px"
+                  />
                 </div>
               ))}
             </div>

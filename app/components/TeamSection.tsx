@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
 export default function TeamSection() {
   const team = [
     {
       name: "Aranya",
       role: "Hospitality Manager and Resident Naturalist",
       desc: "Aranya leads guest experience with a balance of thoughtful hospitality and ecological insight, curating stays that are immersive, grounded, and deeply connected to nature.",
-      img: "/aranya.NEF"
+      img: "/aranya.png"
     },
     {
       name: "Alphin",
@@ -32,11 +34,15 @@ export default function TeamSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1200px] mx-auto">
         {team.map((member, idx) => (
           <div key={idx} className="group cursor-default">
-            <img 
-              src={member.img} 
-              alt={member.role} 
-              className="w-full h-[360px] object-cover grayscale mb-5 transition-all duration-300 group-hover:grayscale-0 block"
-            />
+            <div className="relative w-full h-[360px] mb-5">
+              <Image 
+                src={member.img} 
+                alt={member.role} 
+                fill
+                className="object-cover grayscale transition-all duration-300 group-hover:grayscale-0"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
             <div className="font-serif text-[1.3rem] mb-[6px] text-dark-earth">{member.name}</div>
             <div className="uppercase text-[0.75rem] tracking-[2px] text-forest-green mb-[12px]">{member.role}</div>
             <div className="text-[0.95rem] text-dark-brown leading-[1.6]">

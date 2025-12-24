@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import ExperienceModal from './ExperienceModal';
 
 export default function ExperiencesGrid() {
@@ -95,10 +96,12 @@ export default function ExperiencesGrid() {
             className="relative h-[350px] overflow-hidden group cursor-pointer"
             onClick={() => handleOpenModal(exp)}
           >
-            <img 
+            <Image 
               src={exp.src} 
               alt={exp.alt} 
-              className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 block"
+              fill
+              className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-all duration-500 group-hover:bg-black/20">
               <span className="text-white font-serif text-[1.6rem] md:text-[1.8rem] font-extralight italic leading-tight px-6">

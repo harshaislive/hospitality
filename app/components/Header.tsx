@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
@@ -45,10 +46,14 @@ export default function Header() {
       } ${textColorClass}`}
     >
       <div className="flex items-center gap-3">
-        <img
+        <Image
           src="https://ik.imagekit.io/ofgaefbk0/660a4946cbee8be3fb03c9f8_BEFOREST%20WHITE-01-p-500.png"
           alt="Beforest logo"
+          width={0}
+          height={0}
+          sizes="100vw"
           className={`h-[50px] w-auto block transition-all duration-300 ${logoFilterClass}`}
+          style={{ width: 'auto', height: '50px' }}
         />
       </div>
       <nav className="hidden md:block">
