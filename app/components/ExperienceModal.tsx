@@ -51,7 +51,7 @@ export default function ExperienceModal({ isOpen, onClose, data }: ExperienceMod
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 z-30 text-white/80 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all duration-300 backdrop-blur-sm"
+          className="absolute top-4 right-4 z-30 text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all duration-300 backdrop-blur-sm"
           aria-label="Close modal"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -113,7 +113,7 @@ export default function ExperienceModal({ isOpen, onClose, data }: ExperienceMod
             </div>
 
             {/* Title */}
-            <h2 className="font-serif text-[2.5rem] md:text-[3.5rem] leading-[1.05] mb-6 text-white font-extralight italic">
+            <h2 className="font-serif text-[2.5rem] md:text-[3.5rem] leading-[1.05] mb-6 text-white font-light italic">
               {data.title}
             </h2>
 
@@ -141,7 +141,7 @@ export default function ExperienceModal({ isOpen, onClose, data }: ExperienceMod
             <div className="mt-auto pt-8 border-t border-white/5 flex justify-center md:justify-start">
               <a 
                 href={data.ctaLink} 
-                className="inline-block px-10 py-[16px] bg-white uppercase text-[0.75rem] tracking-[2.5px] font-normal text-rich-red transition-all duration-300 hover:italic hover:scale-105 shadow-lg"
+                className="inline-block px-10 py-[16px] bg-rich-red uppercase text-[0.75rem] tracking-[2.5px] font-normal text-white transition-all duration-300 hover:italic hover:scale-105 shadow-lg"
               >
                 Reserve the stay
               </a>
