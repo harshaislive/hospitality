@@ -19,7 +19,7 @@ export default function ContactUs() {
           {/* Left Column: Content */}
           <div className="w-full md:w-1/2">
             <h1 className="text-[2.5rem] md:text-[3.5rem] italic text-dark-earth mb-6 leading-[1.1]">
-              Blyton Bungalow: Where Your Coorg Adventure Begins
+              Step into the Silence. <br /> Let the Forest Speak.
             </h1>
             <p className="text-[1.1rem] text-dark-earth/80 leading-relaxed mb-10 font-sans font-light">
               Discover the serenity and beauty of Coorg from Blyton Bungalow, your gateway to exploring the enchanting landscapes and rich cultural heritage of the Western Ghats.

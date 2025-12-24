@@ -2,10 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  // Pages with light background where header should be dark initially
+  const isLightPage = [
+    '/contact-us',
+    '/terms-and-conditions',
+    '/privacy-policy',
+    '/return-and-cancellation-policy'
+  ].includes(pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,21 +24,31 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Determine text color based on scroll and page type
+  // Scrolled: Always white text (bg-dark-earth)
+  // Not Scrolled & Light Page: Dark text
+  // Not Scrolled & Dark Page (Home): White text
+  const textColorClass = scrolled 
+    ? 'text-white' 
+    : isLightPage 
+      ? 'text-dark-earth' 
+      : 'text-white';
+
+  const logoFilterClass = (!scrolled && isLightPage) ? 'invert brightness-0' : '';
+
   return (
     <header
       className={`fixed top-0 w-full px-5 py-4 md:px-10 md:py-[18px] flex justify-between items-center z-[1000] border-b border-transparent transition-all duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
         scrolled
-          ? 'bg-dark-earth border-transparent shadow-lg text-white'
-          : 'bg-transparent text-white'
-      }`}
+          ? 'bg-dark-earth border-transparent shadow-lg'
+          : 'bg-transparent'
+      } ${textColorClass}`}
     >
       <div className="flex items-center gap-3">
-        {/* Using standard img tag for external URL to avoid Next.js config for now, or use Image if configured. 
-            Original HTML used img. keeping it simple for replica. */}
         <img
           src="https://ik.imagekit.io/ofgaefbk0/660a4946cbee8be3fb03c9f8_BEFOREST%20WHITE-01-p-500.png"
           alt="Beforest logo"
-          className="h-[50px] w-auto block"
+          className={`h-[50px] w-auto block transition-all duration-300 ${logoFilterClass}`}
         />
       </div>
       <nav className="hidden md:block">
