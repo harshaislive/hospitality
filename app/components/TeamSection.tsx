@@ -1,22 +1,22 @@
 export default function TeamSection() {
   const team = [
     {
-      name: "Arjun K.",
-      role: "Estate Manager",
-      desc: "Arjun has lived in Coorg all his life. He manages the delicate balance between hospitality and permaculture farming.",
-      img: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop"
+      name: "Aranya",
+      role: "Hospitality Manager and Resident Naturalist",
+      desc: "Aranya leads guest experience with a balance of thoughtful hospitality and ecological insight, curating stays that are immersive, grounded, and deeply connected to nature.",
+      img: "/aranya.NEF"
     },
     {
-      name: "Meera S.",
-      role: "Resident Naturalist",
-      desc: "An expert in Western Ghats flora, Meera leads our forest walks and helps guests identify rare bird species.",
-      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop"
+      name: "Alphin",
+      role: "Property Manager",
+      desc: "Alphin is responsible for the smooth functioning of the property, quietly handling operations so guests can relax and feel at home.",
+      img: "/alphin.jpeg"
     },
     {
-      name: "Rohan D.",
-      role: "Head Chef",
-      desc: "Rohan specializes in 'zero-mile' cooking, using ingredients foraged or grown right here on the Poomaale estate.",
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"
+      name: "Sharan",
+      role: "Naturalist",
+      desc: "Sharan creates gentle, immersive outdoor experiences that encourage curiosity, awareness, and a deeper connection to place.",
+      img: "/sharan.jpg"
     }
   ];
 
