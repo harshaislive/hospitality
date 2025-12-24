@@ -14,9 +14,10 @@ export default function Footer() {
         {/* Brand Col */}
         <div className="flex-1 min-w-[200px]">
           <div className="font-serif text-[2.2rem] mb-5 italic text-off-white">Beforest</div>
-          <p className="text-[0.95rem] text-soft-green max-w-[250px] leading-[1.6]">
+          <p className="text-[0.95rem] text-soft-green max-w-[250px] leading-[1.6] mb-4">
             Not just a place to stay. A place to return.
           </p>
+          <a href="tel:+919611435425" className="text-off-white text-[0.9rem] opacity-90 hover:text-warm-yellow transition-all">+91 96114 35425</a>
         </div>
 
         {/* Links Cols */}

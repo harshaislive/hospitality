@@ -28,8 +28,11 @@ export default function ContactUs() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-[0.9rem] uppercase tracking-[2px] font-normal text-rich-red mb-2">Write to us</h3>
-                <a href="mailto:hello@beforest.co" className="text-[1.2rem] text-dark-earth hover:italic transition-all">
+                <a href="mailto:hello@beforest.co" className="text-[1.2rem] text-dark-earth hover:italic transition-all block mb-2">
                   hello@beforest.co
+                </a>
+                <a href="tel:+919611435425" className="text-[1.2rem] text-dark-earth hover:italic transition-all block">
+                  +91 96114 35425
                 </a>
                 <p className="text-[0.9rem] text-dark-earth/60 mt-1">for any queries</p>
               </div>
