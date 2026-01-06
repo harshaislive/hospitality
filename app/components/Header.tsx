@@ -57,7 +57,7 @@ export default function Header() {
         />
       </div>
       <nav className="hidden md:block">
-        <ul className="flex list-none gap-[35px]">
+        <ul className="flex list-none gap-[35px] items-center">
           <li>
             <Link
               href="https://hospitality.beforest.co/"
@@ -70,17 +70,17 @@ export default function Header() {
           </li>
           
           {/* More Dropdown */}
-          <li className="relative group">
+          <li className="relative group h-full flex items-center">
             <button
-              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 flex items-center gap-1 cursor-pointer focus:outline-none ${
+              className={`bg-transparent border-none p-0 font-[inherit] text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 flex items-center gap-1 cursor-pointer focus:outline-none ${
                 scrolled ? 'text-white' : 'text-inherit'
               }`}
             >
-              More <span className="text-[0.6rem]">▼</span>
+              More <span className="text-[0.6rem] relative -top-[1px]">▼</span>
             </button>
             
             {/* Dropdown Menu */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                <ul className="bg-white p-4 shadow-xl rounded-sm flex flex-col gap-4 text-center border-t-2 border-rich-red">
                   <li>
                     <Link
