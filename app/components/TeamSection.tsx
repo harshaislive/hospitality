@@ -1,18 +1,43 @@
+"use client";
+
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 export default function TeamSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('grayscale');
+          } else {
+            entry.target.classList.add('grayscale');
+          }
+        });
+      },
+      { threshold: 0.6 } // Trigger when 60% visible
+    );
+
+    const images = containerRef.current?.querySelectorAll('.team-img');
+    images?.forEach((img) => observer.observe(img));
+
+    return () => observer.disconnect();
+  }, []);
+
   const team = [
-    {
-      name: "Nishan Changappa",
-      role: "Collective Manager",
-      desc: "Nishan Changappa manages the functioning of the coffee plantation and estate operations, integrating nature, farming, and day-to-day logistics.",
-      img: "/nishan.jpg"
-    },
     {
       name: "Aranya",
       role: "Hospitality Manager and Resident Naturalist",
       desc: "Aranya leads guest experience with a balance of thoughtful hospitality and ecological insight, curating stays that are immersive, grounded, and deeply connected to nature.",
       img: "/aranya.png"
+    },
+    {
+      name: "Nishan Changappa",
+      role: "Collective Manager",
+      desc: "Nishan Changappa manages the functioning of the coffee plantation and estate operations, integrating nature, farming, and day-to-day logistics.",
+      img: "/nishan.jpg"
     },
     {
       name: "Alphin",
@@ -29,7 +54,7 @@ export default function TeamSection() {
   ];
 
   return (
-    <section className="py-[110px] px-10 text-center bg-white">
+    <section className="py-[110px] px-10 text-center bg-white" ref={containerRef}>
       <div className="max-w-[720px] mx-auto mb-[70px]">
         <h2 className="text-[2.8rem] mb-[20px] text-dark-earth">Guardians of the Forest</h2>
         <p className="text-dark-brown">
@@ -45,7 +70,7 @@ export default function TeamSection() {
                 src={member.img} 
                 alt={member.role} 
                 fill
-                className="object-cover grayscale transition-all duration-300 group-hover:grayscale-0"
+                className="team-img object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
             </div>
