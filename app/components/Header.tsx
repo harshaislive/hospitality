@@ -164,24 +164,31 @@ export default function Header() {
 
         {/* Mobile Burger Button */}
         <button
-          className="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 bg-transparent border-none cursor-pointer focus:outline-none z-[1001]"
+          className={`md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 border-none cursor-pointer focus:outline-none transition-all duration-300 ${
+            mobileMenuOpen ? 'fixed top-4 right-5 z-[1002]' : 'relative z-[1001]'
+          }`}
+          style={{ backgroundColor: 'transparent', color: mobileMenuOpen ? '#342e29' : 'currentColor' }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileMenuOpen}
         >
           <span
-            className={`w-6 h-[2px] bg-current transition-all duration-300 ${
+            className={`w-6 h-[2px] transition-all duration-300 ${
               mobileMenuOpen ? 'rotate-45 translate-y-2' : ''
             }`}
+            style={{ backgroundColor: mobileMenuOpen ? '#342e29' : 'currentColor' }}
           />
           <span
-            className={`w-6 h-[2px] bg-current transition-all duration-300 ${
+            className={`w-6 h-[2px] transition-all duration-300 ${
               mobileMenuOpen ? 'opacity-0' : ''
             }`}
+            style={{ backgroundColor: mobileMenuOpen ? '#342e29' : 'currentColor' }}
           />
           <span
-            className={`w-6 h-[2px] bg-current transition-all duration-300 ${
+            className={`w-6 h-[2px] transition-all duration-300 ${
               mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
             }`}
+            style={{ backgroundColor: mobileMenuOpen ? '#342e29' : 'currentColor' }}
           />
         </button>
       </header>
