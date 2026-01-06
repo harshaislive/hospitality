@@ -11,7 +11,7 @@ export default function FloatingReserveButton() {
           href="https://live.ipms247.com/booking/book-rooms-blytonbungalow"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-rich-red text-white px-8 py-4 rounded-full shadow-2xl hover:bg-dark-earth hover:scale-105 transition-all duration-300 uppercase tracking-[2px] text-xs font-medium"
+          className="flex items-center gap-2 bg-rich-red text-white border border-rich-red px-8 py-4 rounded-full shadow-2xl hover:bg-white hover:text-rich-red hover:scale-105 transition-all duration-300 uppercase tracking-[2px] text-xs font-medium"
         >
           <span>Reserve Now</span>
           <span className="text-lg">↗</span>
