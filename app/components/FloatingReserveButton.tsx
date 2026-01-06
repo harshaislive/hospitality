@@ -1,11 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function FloatingReserveButton() {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <>
       {/* Desktop Button */}
@@ -14,14 +11,7 @@ export default function FloatingReserveButton() {
           href="https://live.ipms247.com/booking/book-rooms-blytonbungalow"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 border px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 uppercase tracking-[2px] text-xs font-medium"
-          style={{
-            backgroundColor: isHovered ? '#ffffff' : '#86312b',
-            color: isHovered ? '#86312b' : '#ffc083',
-            borderColor: '#86312b'
-          }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          className="flex items-center gap-2 bg-rich-red text-warm-yellow border border-rich-red px-8 py-4 rounded-full shadow-2xl hover:bg-white hover:text-rich-red hover:scale-105 transition-all duration-300 uppercase tracking-[2px] text-xs font-medium"
         >
           <span>Reserve Now</span>
           <span className="text-lg">↗</span>
@@ -38,8 +28,7 @@ export default function FloatingReserveButton() {
           href="https://live.ipms247.com/booking/book-rooms-blytonbungalow"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3 rounded-sm shadow-lg uppercase tracking-[1.5px] text-[0.7rem] font-bold"
-          style={{ backgroundColor: '#86312b', color: '#ffc083' }}
+          className="bg-rich-red text-warm-yellow px-6 py-3 rounded-sm shadow-lg uppercase tracking-[1.5px] text-[0.7rem] font-bold"
         >
           Reserve Now
         </Link>
