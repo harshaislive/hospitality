@@ -11,8 +11,12 @@ export default function Hero() {
         {/* Left Column: Location & Title */}
         <div className="flex-1 text-left w-full">
           <div className="inline-flex items-center gap-[10px] uppercase tracking-[3px] text-xs md:text-sm font-normal mb-[10px] md:mb-[20px] text-warm-yellow">
-            <span className="w-[14px] h-[14px] inline-flex items-center justify-center">📍</span>
-            <span>Poomaale Estate, Coorg</span>
+            <span className="w-[14px] h-[14px] inline-flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+              </svg>
+            </span>
+            <span>Blyton Bungalow, Poomaale Estate</span>
           </div>
           <h1 className="text-[2rem] md:text-[5.5rem] italic leading-[1.1] !text-white max-w-[800px]">
             Silence, interrupted only by the wind.
