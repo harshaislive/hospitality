@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
 const arizonaSerif = localFont({
@@ -98,6 +99,7 @@ export default function RootLayout({
         className={`${arizonaSerif.variable} ${arizonaSans.variable} antialiased`}
       >
         {children}
+        <GoogleAnalytics gaId="G-M6NF9T8PGG" />
       </body>
     </html>
   );
