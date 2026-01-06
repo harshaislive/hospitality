@@ -80,28 +80,39 @@ export default function Header() {
             </button>
             
             {/* Dropdown Menu */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-8 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
-               <ul className="bg-white p-6 shadow-2xl flex flex-col gap-0 border border-gray-200">
-                  <li className="border-b border-gray-200 last:border-0">
+            <div
+              className="absolute top-full left-1/2 -translate-x-1/2 pt-8 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-50"
+            >
+               <ul
+                 className="shadow-2xl flex flex-col gap-0 p-6"
+                 style={{ backgroundColor: '#ffffff', border: '1px solid #e5e7eb' }}
+               >
+                  <li style={{ borderBottom: '1px solid #e5e7eb' }}>
                     <Link
                       href="https://beforest.co/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs uppercase tracking-[2.5px] text-gray-900 hover:text-red-700 transition-all duration-300 block py-4 px-2 relative group/link"
+                      className="text-xs uppercase tracking-[2.5px] transition-all duration-300 block py-4 px-2 relative group/link"
+                      style={{ color: '#111827' }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = '#b91c1c'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = '#111827'}
                     >
                       <span className="relative z-10">Beforest</span>
-                      <span className="absolute bottom-3 left-2 right-2 h-[1px] bg-red-700 scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out"></span>
+                      <span className="absolute bottom-3 left-2 right-2 h-[1px] scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out" style={{ backgroundColor: '#b91c1c' }}></span>
                     </Link>
                   </li>
-                  <li className="border-b border-gray-200 last:border-0">
+                  <li style={{ borderBottom: '1px solid #e5e7eb' }}>
                     <Link
                       href="https://bewild.life/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs uppercase tracking-[2.5px] text-gray-900 hover:text-red-700 transition-all duration-300 block py-4 px-2 relative group/link"
+                      className="text-xs uppercase tracking-[2.5px] transition-all duration-300 block py-4 px-2 relative group/link"
+                      style={{ color: '#111827' }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = '#b91c1c'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = '#111827'}
                     >
                       <span className="relative z-10">Bewild</span>
-                      <span className="absolute bottom-3 left-2 right-2 h-[1px] bg-red-700 scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out"></span>
+                      <span className="absolute bottom-3 left-2 right-2 h-[1px] scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out" style={{ backgroundColor: '#b91c1c' }}></span>
                     </Link>
                   </li>
                   <li>
@@ -109,10 +120,13 @@ export default function Header() {
                       href="https://experiences.beforest.co/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs uppercase tracking-[2.5px] text-gray-900 hover:text-red-700 transition-all duration-300 block py-4 px-2 relative group/link"
+                      className="text-xs uppercase tracking-[2.5px] transition-all duration-300 block py-4 px-2 relative group/link"
+                      style={{ color: '#111827' }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = '#b91c1c'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = '#111827'}
                     >
                       <span className="relative z-10">Beforest Experiences</span>
-                      <span className="absolute bottom-3 left-2 right-2 h-[1px] bg-red-700 scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out"></span>
+                      <span className="absolute bottom-3 left-2 right-2 h-[1px] scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out" style={{ backgroundColor: '#b91c1c' }}></span>
                     </Link>
                   </li>
                </ul>
