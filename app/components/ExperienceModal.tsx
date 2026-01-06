@@ -113,17 +113,17 @@ export default function ExperienceModal({ isOpen, onClose, data }: ExperienceMod
             </div>
 
             {/* Title */}
-            <h2 className="font-serif text-[2.5rem] md:text-[3.5rem] leading-[1.05] mb-6 text-white font-light italic">
+            <h2 className="font-serif text-[2.5rem] md:text-[3.5rem] leading-[1.05] mb-6 !text-white font-light italic">
               {data.title}
             </h2>
 
             {/* Subtitle */}
-            <h3 className="text-[0.75rem] tracking-[2px] uppercase font-light text-white/70 mb-8 leading-relaxed font-sans border-l border-rich-red/60 pl-4">
+            <h3 className="text-[0.75rem] tracking-[2px] uppercase font-light !text-white/70 mb-8 leading-relaxed font-sans border-l border-rich-red/60 pl-4">
               {data.subtitle}
             </h3>
 
             {/* Description */}
-            <div className="text-[0.95rem] md:text-[1rem] leading-relaxed text-white/60 font-sans font-extralight mb-10">
+            <div className="text-[0.95rem] md:text-[1rem] leading-relaxed text-white/60 font-sans font-extralight mb-10 text-justify">
               <p>{data.description}</p>
             </div>
 

@@ -1,0 +1,6 @@
+Beforest
+Beforest is a passionate advocate for conservation, restoration, and sustainability. Our journey is dedicated to rejuvenating landscapes using the concept of collectives. A collective is a platform where urban folks join hands to acquire and rehabilitate vast tracts of land. The core objective is to restore these areas to their natural state, fostering thriving ecosystems – both financial and ecological.
+
+Wilderness Collective: A wilderness collective is a collective where the singular agenda is to grow a forest. Why? Because forests are important. Using permaculture principles and minimal intervention practices, large landscapes are acquired and designed to promote biodiversity while setting the path for a harmonious coexistence between nature and humanity.
+
+Our Vision: Beforest is committed to the long-term health of the environment. We're not only revitalizing land; we're reimagining a future where communities flourish within the bounds of nature. The Poomaale Collective embodies our mission, offering educational experiences, community engagement, and sustainable practices as we stride towards a world where wilderness and humanity coexist in harmony. Today Beforest runs 6 collectives encompassing 1,300 acres of a variety of landscapes from the deccan plateau to the western ghats and it all started here at Poomaale.

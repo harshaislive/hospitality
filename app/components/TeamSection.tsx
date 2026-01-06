@@ -3,6 +3,12 @@ import Image from 'next/image';
 export default function TeamSection() {
   const team = [
     {
+      name: "Nishan Changappa",
+      role: "Collective Manager",
+      desc: "Nishan Changappa manages the functioning of the coffee plantation and estate operations, integrating nature, farming, and day-to-day logistics.",
+      img: "/nishan.jpg"
+    },
+    {
       name: "Aranya",
       role: "Hospitality Manager and Resident Naturalist",
       desc: "Aranya leads guest experience with a balance of thoughtful hospitality and ecological insight, curating stays that are immersive, grounded, and deeply connected to nature.",
@@ -31,7 +37,7 @@ export default function TeamSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1200px] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-[1200px] mx-auto">
         {team.map((member, idx) => (
           <div key={idx} className="group cursor-default">
             <div className="relative w-full h-[360px] mb-5">
@@ -40,7 +46,7 @@ export default function TeamSection() {
                 alt={member.role} 
                 fill
                 className="object-cover grayscale transition-all duration-300 group-hover:grayscale-0"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
             </div>
             <div className="font-serif text-[1.3rem] mb-[6px] text-dark-earth">{member.name}</div>
