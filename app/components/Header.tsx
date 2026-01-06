@@ -167,7 +167,7 @@ export default function Header() {
           className={`md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 border-none cursor-pointer focus:outline-none transition-all duration-300 ${
             mobileMenuOpen ? 'fixed top-4 right-5 z-[1002]' : 'relative z-[1001]'
           }`}
-          style={{ backgroundColor: 'transparent', color: mobileMenuOpen ? '#342e29' : 'currentColor' }}
+          style={{ color: mobileMenuOpen ? '#342e29' : 'currentColor' }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
           aria-expanded={mobileMenuOpen}
