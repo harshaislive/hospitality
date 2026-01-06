@@ -1,10 +1,31 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import ExperienceModal from './ExperienceModal';
 
 export default function ExperiencesGrid() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('grayscale');
+          } else {
+            entry.target.classList.add('grayscale');
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    const images = containerRef.current?.querySelectorAll('.experience-img');
+    images?.forEach((img) => observer.observe(img));
+
+    return () => observer.disconnect();
+  }, []);
   const [selectedExperience, setSelectedExperience] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -81,7 +102,7 @@ export default function ExperiencesGrid() {
   };
 
   return (
-    <section className="py-[120px] px-10 text-center bg-off-white">
+    <section className="py-[120px] px-10 text-center bg-off-white" ref={containerRef}>
       <div className="max-w-[700px] mx-auto mb-[80px]">
         <h2 className="text-[2.8rem] mb-[20px] text-dark-earth">The Wild, Curated</h2>
         <p className="text-dark-earth font-light">
@@ -100,7 +121,7 @@ export default function ExperiencesGrid() {
               src={exp.src} 
               alt={exp.alt} 
               fill
-              className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+              className="experience-img object-cover grayscale transition-all duration-1000 ease-out group-hover:scale-110"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-all duration-500 group-hover:bg-black/20">

@@ -80,26 +80,28 @@ export default function Header() {
             </button>
             
             {/* Dropdown Menu */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-               <ul className="bg-white p-4 shadow-xl rounded-sm flex flex-col gap-4 text-center border-t-2 border-rich-red">
-                  <li>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-8 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
+               <ul className="bg-off-white p-6 shadow-2xl flex flex-col gap-0 border border-dark-earth/10">
+                  <li className="border-b border-dark-earth/10 last:border-0">
                     <Link
                       href="https://beforest.co/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs uppercase tracking-[1.5px] text-dark-earth hover:text-rich-red transition-colors block"
+                      className="text-xs uppercase tracking-[2.5px] text-dark-earth hover:text-rich-red transition-all duration-300 block py-4 px-2 relative group/link"
                     >
-                      Beforest
+                      <span className="relative z-10">Beforest</span>
+                      <span className="absolute bottom-3 left-2 right-2 h-[1px] bg-rich-red scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out"></span>
                     </Link>
                   </li>
-                  <li>
+                  <li className="border-b border-dark-earth/10 last:border-0">
                     <Link
                       href="https://bewild.life/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs uppercase tracking-[1.5px] text-dark-earth hover:text-rich-red transition-colors block"
+                      className="text-xs uppercase tracking-[2.5px] text-dark-earth hover:text-rich-red transition-all duration-300 block py-4 px-2 relative group/link"
                     >
-                      Bewild
+                      <span className="relative z-10">Bewild</span>
+                      <span className="absolute bottom-3 left-2 right-2 h-[1px] bg-rich-red scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out"></span>
                     </Link>
                   </li>
                   <li>
@@ -107,9 +109,10 @@ export default function Header() {
                       href="https://experiences.beforest.co/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs uppercase tracking-[1.5px] text-dark-earth hover:text-rich-red transition-colors block"
+                      className="text-xs uppercase tracking-[2.5px] text-dark-earth hover:text-rich-red transition-all duration-300 block py-4 px-2 relative group/link"
                     >
-                      Beforest Experiences
+                      <span className="relative z-10">Beforest Experiences</span>
+                      <span className="absolute bottom-3 left-2 right-2 h-[1px] bg-rich-red scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out"></span>
                     </Link>
                   </li>
                </ul>

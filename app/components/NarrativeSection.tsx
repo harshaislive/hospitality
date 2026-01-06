@@ -1,9 +1,33 @@
+"use client";
+
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function NarrativeSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('grayscale');
+          } else {
+            entry.target.classList.add('grayscale');
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    const images = containerRef.current?.querySelectorAll('.narrative-img');
+    images?.forEach((img) => observer.observe(img));
+
+    return () => observer.disconnect();
+  }, []);
   return (
-    <div className="bg-off-white text-dark-earth">
+    <div className="bg-off-white text-dark-earth" ref={containerRef}>
       {/* 2. Poomaale Collective */}
       <section className="py-[120px] px-5 md:px-10 bg-white">
         <div className="max-w-[1000px] mx-auto text-center mb-[60px]">
@@ -22,7 +46,7 @@ export default function NarrativeSection() {
                         src="https://ik.imagekit.io/ofgaefbk0/PBR_3280.jpg?q=80&w=2071&auto=format&fit=crop"
                         alt="Forest Canopy"
                         fill
-                        className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        className="narrative-img object-cover grayscale transition-all duration-500"
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
@@ -41,7 +65,7 @@ export default function NarrativeSection() {
                         src="https://ik.imagekit.io/ofgaefbk0/PBR_0335.jpg?q=80&w=2071&auto=format&fit=crop"
                         alt="Coffee Plantation"
                         fill
-                        className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        className="narrative-img object-cover grayscale transition-all duration-500"
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
@@ -60,7 +84,7 @@ export default function NarrativeSection() {
                         src="https://images.unsplash.com/photo-1524350876685-274059332603?q=80&w=2071&auto=format&fit=crop"
                         alt="Biodiversity"
                         fill
-                        className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        className="narrative-img object-cover grayscale transition-all duration-500"
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
@@ -107,7 +131,7 @@ export default function NarrativeSection() {
                   src="/PBR_0963.jpg"
                   alt="Beforest Vision - Trekking in the Rain"
                   fill
-                  className="object-cover"
+                  className="narrative-img object-cover grayscale transition-all duration-500"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
