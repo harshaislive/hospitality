@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import FloatingReserveButton from './components/FloatingReserveButton';
 import "./globals.css";
 
 const arizonaSerif = localFont({
@@ -100,6 +101,7 @@ export default function RootLayout({
       >
         {children}
         <GoogleAnalytics gaId="G-M6NF9T8PGG" />
+        <FloatingReserveButton />
       </body>
     </html>
   );

@@ -68,42 +68,54 @@ export default function Header() {
               Home
             </Link>
           </li>
-          <li>
-            <Link
-              href="https://beforest.co/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
+          
+          {/* More Dropdown */}
+          <li className="relative group">
+            <button
+              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 flex items-center gap-1 cursor-pointer focus:outline-none ${
                 scrolled ? 'text-white' : 'text-inherit'
               }`}
             >
-              Beforest
-            </Link>
+              More <span className="text-[0.6rem]">▼</span>
+            </button>
+            
+            {/* Dropdown Menu */}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+               <ul className="bg-white p-4 shadow-xl rounded-sm flex flex-col gap-4 text-center border-t-2 border-rich-red">
+                  <li>
+                    <Link
+                      href="https://beforest.co/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs uppercase tracking-[1.5px] text-dark-earth hover:text-rich-red transition-colors block"
+                    >
+                      Beforest
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://bewild.life/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs uppercase tracking-[1.5px] text-dark-earth hover:text-rich-red transition-colors block"
+                    >
+                      Bewild
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://experiences.beforest.co/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs uppercase tracking-[1.5px] text-dark-earth hover:text-rich-red transition-colors block"
+                    >
+                      Beforest Experiences
+                    </Link>
+                  </li>
+               </ul>
+            </div>
           </li>
-          <li>
-            <Link
-              href="https://bewild.life/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
-                scrolled ? 'text-white' : 'text-inherit'
-              }`}
-            >
-              Bewild
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://experiences.beforest.co/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`text-xs uppercase tracking-[2px] font-normal hover:text-warm-yellow transition-all duration-300 ${
-                scrolled ? 'text-white' : 'text-inherit'
-              }`}
-            >
-              Beforest Experiences
-            </Link>
-          </li>
+
           <li>
             <Link
               href="/contact-us"
